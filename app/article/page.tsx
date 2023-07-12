@@ -25,7 +25,7 @@ export default function ArticlePage({ searchParams }: Props) {
         <div className='px-10'>
           <h1 className='headerTitle px-0 no-underline pb-2'>{article.title}</h1>
           <div className='flex divide-x-2 space-x-4'>
-            <h2 className='font-bold'>By: {article.author || 'Unknown'}</h2>
+            <h2 className='font-bold'>By: {article.author === 'null' ? 'Unknown' : article.author}</h2>
             <h2 className='font-bold pl-4'>Source: {article.source}</h2>
             <h2 className='pl-4'>
               <LiveTimestamp time={article.published_at} />

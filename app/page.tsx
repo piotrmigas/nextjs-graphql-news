@@ -4,12 +4,7 @@ import NewsList from './NewsList';
 import response from '../response.json';
 
 export default async function HomePage() {
-  const news: NewsResponse = response;
-  // || (await fetchNews(categories.join(',')));
+  const news: NewsResponse = response || (await fetchNews(categories.join(',')));
 
-  return (
-    <div>
-      <NewsList news={news} />
-    </div>
-  );
+  return <NewsList news={news} />;
 }

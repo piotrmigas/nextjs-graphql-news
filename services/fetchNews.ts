@@ -34,7 +34,7 @@ export const fetchNews = async (category?: Category | string, keywords?: string,
 
   const res = await fetch('https://nabeul.stepzen.net/api/alert-jaguar/__graphql', {
     method: 'POST',
-    cache: isDynamic ? 'no-cache' : 'default',
+    cache: isDynamic ? 'no-store' : 'default',
     next: { revalidate: isDynamic ? 0 : 20 },
     headers: {
       'Content-Type': 'application/json',
