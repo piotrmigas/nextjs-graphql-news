@@ -31,7 +31,7 @@ export default function ArticlePage({ searchParams }: Props) {
               <LiveTimestamp time={article.published_at} />
             </h2>
           </div>
-          <p className='pt-4 '>{article.description}</p>
+          <p className='pt-4'>{article.description}</p>
         </div>
       </section>
     </article>
